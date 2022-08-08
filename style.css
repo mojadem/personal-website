@@ -200,7 +200,6 @@ nav a {
         --cell-size: min(100px, 20vw);
         --left-align: 1;
         --right-align: 5;
-        --top-align: 1;
     }
 
     nav {
