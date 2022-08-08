@@ -2,6 +2,11 @@
     --light: 243, 242, 231;
     --dark: 20, 22, 61;
     --accent: 255, 206, 140;
+
+    --rows: 10;
+    --columns: 10;
+    --cell-size: 100px;
+    --width: calc(var(--columns) * var(--cell-size));
 }
 
 body {
@@ -44,11 +49,6 @@ i {
 }
 
 main {
-    --rows: 10;
-    --columns: 10;
-    --cell-size: 100px;
-    --width: calc(var(--columns) * var(--cell-size));
-
     display: grid;
     grid-template-columns: repeat(var(--columns), var(--cell-size));
     grid-template-rows: repeat(var(--rows), var(--cell-size));
@@ -56,6 +56,18 @@ main {
     margin: 0 auto;
     background-image: url("assets/grid-box.svg");
     background-size: calc(var(--cell-size));
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --columns: 6;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --columns: 4;
+    }
 }
 
 nav {
@@ -116,19 +128,20 @@ nav a p {
     cursor: pointer;
     background-color: rgba(var(--light), 0.25);
     border: solid rgb(var(--light)) 1px;
+    width: var(--cell-size);
+    height: var(--cell-size);
+
+    transition: width 500ms, height 500ms;
 }
 
-.btn.active {
+.btn:hover {
     background-color: rgba(var(--light), 0.75);
     border: solid rgb(var(--accent)) 2px;
+    height: calc(3 * var(--cell-size));
+    width: calc(4 * var(--cell-size));
 }
 
 #school-btn {
-    grid-row: 7;
-    grid-column: 3;
-}
-
-#school-btn.active {
-    grid-row: 6/9;
-    grid-column: 2/5;
+    grid-row: 7/10;
+    grid-column: 3/7;
 }
