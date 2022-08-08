@@ -7,6 +7,9 @@
     --columns: 10;
     --cell-size: 100px;
     --width: calc(var(--columns) * var(--cell-size));
+
+    --left-align: 3;
+    --right-align: 9;
 }
 
 body {
@@ -24,7 +27,7 @@ p {
 h1 {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
-    font-size: 72px;
+    font-size: calc(.75 * var(--cell-size));
 }
 
 p,
@@ -58,16 +61,15 @@ main {
     background-size: calc(var(--cell-size));
 }
 
-@media screen and (max-width: 1000px) {
-    :root {
-        --columns: 6;
-    }
+.tile {
+    box-sizing: border-box;
+    background-color: rgba(var(--light), 0.25);
+    border: solid rgb(var(--light)) 1px;
 }
 
-@media screen and (max-width: 600px) {
-    :root {
-        --columns: 4;
-    }
+.tile.active {
+    background-color: rgba(var(--light), 0.75);
+    border: solid rgb(var(--accent)) 2px;
 }
 
 nav {
@@ -77,25 +79,21 @@ nav {
 }
 
 nav ul {
+    padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 nav li {
     list-style: none;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(var(--light), 0.25);
-    border: solid rgb(var(--light)) 1px;
+    width: var(--cell-size);
+    height: var(--cell-size);
+
 }
 
 nav li:hover {
     background-color: rgba(var(--light), 0.5);
-}
-
-nav li.active {
-    background-color: rgba(var(--light), 0.75);
-    border: solid rgb(var(--accent)) 2px;
 }
 
 nav a {
@@ -111,37 +109,96 @@ nav a p {
 }
 
 #welcome {
-    grid-column: 3;
+    grid-column: var(--left-align)/var(--right-align);
     grid-row: 2;
 }
 
 #intro {
-    grid-column: 3/9;
+    grid-column: var(--left-align)/var(--right-align);
     grid-row: 3;
 }
 
 #intro p {
-    font-size: 36px;
+    font-size: calc(.35 * var(--cell-size));
 }
 
 .btn {
     cursor: pointer;
-    background-color: rgba(var(--light), 0.25);
-    border: solid rgb(var(--light)) 1px;
-    width: var(--cell-size);
     height: var(--cell-size);
-
+    width: var(--cell-size);
     transition: width 500ms, height 500ms;
+    grid-column: var(--left-align);
 }
 
-.btn:hover {
-    background-color: rgba(var(--light), 0.75);
-    border: solid rgb(var(--accent)) 2px;
-    height: calc(3 * var(--cell-size));
-    width: calc(4 * var(--cell-size));
+.btn.active {
+    border-right: none;
+}
+
+.btn.inactive {
+    border-right: solid rgb(var(--accent)) 2px;
+}
+
+#info-viewport {
+    position: relative;
+    grid-column: calc(var(--left-align) + 1) / var(--right-align);
+    grid-row: 6/10;
+    width: 0px;
+    transition: width 500ms;
+}
+
+#info-viewport.active {
+    border-left: none;
+    width: calc((var(--right-align) - var(--left-align) - 1) * var(--cell-size));
+}
+
+.info {
+    /* TODO: remove height when not visible */
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 250ms;
+    transition-delay: 0ms;
+}
+
+.info.visible {
+    opacity: 1;
+    transition-duration: 500ms;
+    transition-delay: 500ms;
 }
 
 #school-btn {
-    grid-row: 7/10;
-    grid-column: 3/7;
+    grid-row: 6;
+}
+
+#code-btn {
+    grid-row: 7;
+}
+
+#design-btn {
+    grid-row: 8;
+}
+
+#music-btn {
+    grid-row: 9;
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --columns: 6;
+        --left-align: 2;
+        --right-align: 6;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --columns: 4;
+        --cell-size: min(100px, 20vw);
+        --left-align: 1;
+        --right-align: 5;
+    }
+
+    nav {
+        justify-content: center;
+    }
 }
