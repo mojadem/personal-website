@@ -10,6 +10,7 @@
 
     --left-align: 3;
     --right-align: 9;
+    --top-align: 2;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 
 p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
+    font-size: calc(.18 * var(--cell-size));
     padding: 10px;
 }
 
@@ -28,6 +29,10 @@ h1 {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: calc(.75 * var(--cell-size));
+}
+
+i {
+    font-size: calc(.5 * var(--cell-size));
 }
 
 p,
@@ -104,18 +109,14 @@ nav a {
     align-items: flex-end;
 }
 
-nav a p {
-    font-size: 18px;
-}
-
 #welcome {
     grid-column: var(--left-align)/var(--right-align);
-    grid-row: 2;
+    grid-row: var(--top-align);
 }
 
 #intro {
     grid-column: var(--left-align)/var(--right-align);
-    grid-row: 3;
+    grid-row: calc(var(--top-align) + 1);
 }
 
 #intro p {
@@ -141,12 +142,14 @@ nav a p {
 #info-viewport {
     position: relative;
     grid-column: calc(var(--left-align) + 1) / var(--right-align);
-    grid-row: 6/10;
+    grid-row: calc(var(--top-align) + 4) / calc(var(--top-align) + 8);
+    border: none;
     width: 0px;
     transition: width 500ms;
 }
 
 #info-viewport.active {
+    border: solid rgb(var(--accent)) 2px;
     border-left: none;
     width: calc((var(--right-align) - var(--left-align) - 1) * var(--cell-size));
 }
@@ -156,30 +159,31 @@ nav a p {
     position: absolute;
     top: 0;
     opacity: 0;
+    width: calc((var(--right-align) - var(--left-align) - 1) * var(--cell-size));
     transition: opacity 250ms;
     transition-delay: 0ms;
 }
 
 .info.visible {
     opacity: 1;
-    transition-duration: 500ms;
     transition-delay: 500ms;
+    transition-duration: 500ms;
 }
 
 #school-btn {
-    grid-row: 6;
+    grid-row: calc(var(--top-align) + 4);
 }
 
 #code-btn {
-    grid-row: 7;
+    grid-row: calc(var(--top-align) + 5);
 }
 
 #design-btn {
-    grid-row: 8;
+    grid-row: calc(var(--top-align) + 6);
 }
 
 #music-btn {
-    grid-row: 9;
+    grid-row: calc(var(--top-align) + 7);
 }
 
 @media screen and (max-width: 1000px) {
@@ -196,6 +200,7 @@ nav a p {
         --cell-size: min(100px, 20vw);
         --left-align: 1;
         --right-align: 5;
+        --top-align: 1;
     }
 
     nav {
