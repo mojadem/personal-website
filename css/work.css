@@ -1,0 +1,9 @@
+@import "./common.css";
+
+.btn {
+    width: calc(2 * var(--cell-size));
+}
+
+.btn h3 {
+    padding: 0;
+}

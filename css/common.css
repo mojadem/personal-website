@@ -32,14 +32,20 @@ h1 {
 
 h2,
 h3,
+h4,
 p {
     font-family: 'DM Sans', sans-serif;
 }
 
 h2 {
-    font-size: calc(.35 * var(--cell-size));
+    font-size: calc(.36 * var(--cell-size));
     padding: calc(.2 * var(--cell-size));
     font-weight: 500;
+}
+
+h3 {
+    font-size: calc(.24 * var(--cell-size));
+    padding: calc(.15 * var(--cell-size));
 }
 
 p {
@@ -55,6 +61,7 @@ p,
 h1,
 h2,
 h3,
+h4,
 i {
     color: rgb(var(--dark));
     margin: 0;
@@ -201,7 +208,8 @@ a:hover,
     transition-duration: 500ms;
 }
 
-.info p {
+.info p,
+.info h3 {
     padding-bottom: 0;
 }
 

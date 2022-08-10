@@ -1,0 +1,59 @@
+@import "./common.css";
+
+:root {
+    --left-align: 2;
+    --right-align: 8;
+}
+
+#portrait {
+    grid-row: 4;
+    grid-column: 7;
+    height: calc(3 * var(--cell-size));
+}
+
+#circle {
+    grid-row: 6;
+    grid-column: 5;
+}
+
+#semicircle {
+    transform: rotate(90deg);
+    grid-row: 1;
+    grid-column: var(--left-align);
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --left-align: 1;
+        --right-align: 6;
+    }
+
+    #circle {
+        grid-column: 3;
+    }
+
+    #portrait {
+        grid-row: 3;
+        grid-column: 4;
+        height: calc(3 * var(--cell-size));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --rows: 12;
+    }
+
+    #circle {
+        grid-column: 1;
+    }
+
+    #portrait {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #subheader {
+        grid-row: 5;
+    }
+}
