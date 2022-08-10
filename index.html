@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Matt Dembiczak</title>
+    <title>Home</title>
     <meta name="description" content="Personal Site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap"
@@ -17,35 +18,36 @@
 <body>
     <nav>
         <ul>
-            <li class="tile active"><a href="#">
+            <li><a class="tile active" href="#">
                     <p>Home</p>
                 </a></li>
-            <li class="tile"><a href="#">
+            <li><a class="tile" href="#">
                     <p>About</p>
                 </a></li>
-            <li class="tile"><a href="#">
+            <li><a class="tile" href="#">
                     <p>Work</p>
                 </a></li>
-            <li class="tile"><a href="#">
+            <li><a class="tile" href="html/contact.html">
                     <p>Contact</p>
                 </a></li>
         </ul>
     </nav>
     <main>
-        <div id="semicircle"></div>
-        <div id="diamond"></div>
-        <h1 id="welcome">Welcome!</h1>
-        <div id="intro">
-            <p>I’m Matt Dembiczak, an aspiring developer, designer, and creator.</p>
-            <p>Click the icons to learn
-                more about me!</p>
-        </div>
+        <div id="semicircle" class="shape"></div>
+        <div id="diamond" class="shape"></div>
+        <section id="header">
+            <h1>Welcome!</h1>
+        </section>
+        <section id="subheader">
+            <h2>I’m Matt Dembiczak, an aspiring developer, designer, and creator.</h2>
+            <h2>Click the icons to learn more about me!</h2>
+        </section>
         <button id="school-btn" class="btn tile" data-topic="school"><i class="fa-solid fa-school"></i></button>
         <button id="code-btn" class="btn tile" data-topic="code"><i class="fa-solid fa-code"></i></button>
         <button id="design-btn" class="btn tile" data-topic="design"><i class="fa-solid fa-crop"></i></button>
         <button id="music-btn" class="btn tile" data-topic="music"><i class="fa-solid fa-music"></i></button>
         <div id="info-viewport" class="tile">
-            <div id="school" class="info">
+            <section id="school" class="info">
                 <p>
                     I'm currently a third year student at Penn State University based in University Park, PA, pursuing a
                     double major in Computer Science and Digital Arts and Media Design.
@@ -56,8 +58,8 @@
                     and Media Design major, I knew it would be the perfect complement to both diversify my opportunities
                     and to help me pursue my personal interests in indie game and web development.
                 </p>
-            </div>
-            <div id="code" class="info">
+            </section>
+            <section id="code" class="info">
                 <p>
                     I consider myself a software developer first and foremost. I began coding in high school when a
                     teacher I was close to introduced me to HTML and CSS. But, if I'm going to be honest, I wasn't very
@@ -72,8 +74,8 @@
                     <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot</a> or
                     <a href="https://bevyengine.org/" target="_blank" rel="noopener noreferrer">Bevy</a>.
                 </p>
-            </div>
-            <div id="design" class="info">
+            </section>
+            <section id="design" class="info">
                 <p>
                     Digital art and design has always been an interest of mine. In fact, graphic design was my dream
                     profession as a child, and was a pretty serious hobby of mine for a few years. I have particular
@@ -86,17 +88,17 @@
                     cases, written to be interacted with and understood by humans, and design is very much the
                     philosophy of how humans interact and understand.
                 </p>
-            </div>
-            <div id="music" class="info">
+            </section>
+            <section id="music" class="info">
                 <p>
                     In my free time, I love to engage with music. Throughout my childhood, I studied piano, with an
-                    interest in classical music. I have experimented in music production, and enjoy messing around with
-                    my keyboard and listening to different sounds.
+                    interest in classical music. I have experimented in music production, and enjoy playing my keyboard
+                    and guitar.
                 </p>
                 <p>
-                    Someday I would also like to learn to play the guitar that I bought.
+                    Someday I would like to become proficient in music production and sound design.
                 </p>
-            </div>
+            </section>
         </div>
     </main>
     <script src="script.js" async defer></script>

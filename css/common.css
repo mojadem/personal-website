@@ -16,19 +16,35 @@
 body {
     background: rgb(157, 179, 202);
     background: radial-gradient(circle, rgba(157, 179, 202, 1) 0%, rgba(102, 135, 174, 1) 100%);
-    min-height: 100vh;
-}
-
-p {
-    font-family: 'DM Sans', sans-serif;
-    font-size: calc(.18 * var(--cell-size));
-    padding: calc(.1 * var(--cell-size));
+    margin: 0;
+    padding: 20px;
+    padding-top: 0px;
+    min-height: calc(100vh - 20px);
 }
 
 h1 {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: calc(.75 * var(--cell-size));
+    padding-left: calc(.05 * var(--cell-size));
+    padding-right: calc(.05 * var(--cell-size));
+}
+
+h2,
+h3,
+p {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h2 {
+    font-size: calc(.35 * var(--cell-size));
+    padding: calc(.2 * var(--cell-size));
+    font-weight: 500;
+}
+
+p {
+    font-size: calc(.18 * var(--cell-size));
+    padding: calc(.1 * var(--cell-size));
 }
 
 i {
@@ -37,6 +53,8 @@ i {
 
 p,
 h1,
+h2,
+h3,
 i {
     color: rgb(var(--dark));
     margin: 0;
@@ -48,28 +66,41 @@ main {
     grid-template-rows: repeat(var(--rows), var(--cell-size));
     width: var(--width);
     margin: 0 auto;
-    background-image: url("assets/grid-box.svg");
+    background-image: url("../assets/grid-box.svg");
     background-size: calc(var(--cell-size));
 }
 
-#semicircle {
-    background-image: url("assets/semicircle.svg");
-    grid-row: 1;
-    grid-column: 1;
-    height: calc(4 * var(--cell-size));
-    width: calc(2 * var(--cell-size));
-    opacity: .25;
-    z-index: -1;
-}
-
-#diamond {
-    background-image: url("assets/diamond.svg");
-    grid-row: 5;
-    grid-column: 5;
+.shape {
     height: calc(4 * var(--cell-size));
     width: calc(4 * var(--cell-size));
     opacity: .25;
     z-index: -1;
+}
+
+#circle {
+    background-image: url("../assets/circle.svg");
+}
+
+#semicircle {
+    background-image: url("../assets/semicircle.svg");
+}
+
+#diamond {
+    background-image: url("../assets/diamond.svg");
+}
+
+#semidiamond {
+    background-image: url("../assets/semidiamond.svg");
+}
+
+#header {
+    grid-column: var(--left-align) / var(--right-align);
+    grid-row: var(--top-align);
+}
+
+#subheader {
+    grid-column: var(--left-align) / var(--right-align);
+    grid-row: calc(var(--top-align) + 1);
 }
 
 .tile {
@@ -103,10 +134,6 @@ nav li {
 
 }
 
-nav li:hover {
-    background-color: rgba(var(--light), 0.5);
-}
-
 nav a {
     text-decoration: none;
     width: 100%;
@@ -115,18 +142,9 @@ nav a {
     align-items: flex-end;
 }
 
-#welcome {
-    grid-column: var(--left-align)/var(--right-align);
-    grid-row: var(--top-align);
-}
-
-#intro {
-    grid-column: var(--left-align)/var(--right-align);
-    grid-row: calc(var(--top-align) + 1);
-}
-
-#intro p {
-    font-size: calc(.35 * var(--cell-size));
+a:hover,
+.btn:hover {
+    background-color: rgba(var(--light), 0.5);
 }
 
 .btn {
@@ -138,6 +156,10 @@ nav a {
 
 .btn.active {
     border-right: none;
+}
+
+.btn.active:hover {
+    background-color: rgba(var(--light), 0.75);
 }
 
 .btn.inactive {
@@ -183,32 +205,12 @@ nav a {
     padding-bottom: 0;
 }
 
-#school-btn {
-    grid-row: 6;
-}
-
-#code-btn {
-    grid-row: 7;
-}
-
-#design-btn {
-    grid-row: 8;
-}
-
-#music-btn {
-    grid-row: 9;
-}
-
 @media screen and (max-width: 1000px) {
     :root {
         --columns: 6;
         --left-align: 2;
         --right-align: 6;
         --top-align: 1;
-    }
-
-    #diamond {
-        grid-column: 3;
     }
 }
 
@@ -223,9 +225,5 @@ nav a {
 
     nav {
         justify-content: center;
-    }
-
-    #diamond {
-        grid-column: 1;
     }
 }

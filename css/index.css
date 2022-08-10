@@ -1,0 +1,40 @@
+@import "./common.css";
+
+#semicircle {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#diamond {
+    grid-row: 5;
+    grid-column: 5;
+}
+
+#school-btn {
+    grid-row: 6;
+}
+
+#code-btn {
+    grid-row: 7;
+}
+
+#design-btn {
+    grid-row: 8;
+}
+
+#music-btn {
+    grid-row: 9;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #diamond {
+        grid-column: 3;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #diamond {
+        grid-column: 1;
+    }
+}
