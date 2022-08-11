@@ -10,10 +10,16 @@
     grid-column: var(--left-align);
 }
 
-#portrait {
-    grid-row: 5;
-    grid-column: 6;
+#chess {
+    grid-row: 6;
+    grid-column: 2;
     width: calc(4 * var(--cell-size));
+}
+
+#bench {
+    grid-row: 5;
+    grid-column: 7;
+    width: calc(3 * var(--cell-size));
 }
 
 @media screen and (max-width: 1000px) {
