@@ -117,12 +117,6 @@ main {
     border: solid rgb(var(--light)) calc(.01 * var(--cell-size));
 }
 
-.tile.active,
-a:active {
-    background-color: rgba(var(--light), 0.75);
-    border: solid rgb(var(--accent)) calc(.02 * var(--cell-size));
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -162,6 +156,13 @@ nav a,
 a:hover,
 .btn:hover {
     background-color: rgba(var(--light), 0.5);
+}
+
+.tile.active,
+a:active,
+.btn:active {
+    background-color: rgba(var(--light), 0.75);
+    border: solid rgb(var(--accent)) calc(.02 * var(--cell-size));
 }
 
 .btn {

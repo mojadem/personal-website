@@ -68,6 +68,21 @@ img {
     margin: auto;
 }
 
+#orblitz img {
+    width: calc(2.88 * var(--cell-size));
+    height: calc(5.12 * var(--cell-size));
+}
+
+#anim iframe {
+    width: calc(3.2 * var(--cell-size));
+    height: calc(2.4 * var(--cell-size));
+}
+
+#blender video {
+    width: calc(2.4 * var(--cell-size));
+    height: calc(3.2 * var(--cell-size));
+}
+
 @media screen and (max-width: 600px) {
     :root {
         --rows: 13;
