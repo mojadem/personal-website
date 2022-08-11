@@ -6,35 +6,25 @@
 }
 
 #diamond {
-    grid-row: 5;
-    grid-column: 5;
-}
-
-#school-btn {
     grid-row: 6;
+    grid-column: var(--left-align);
 }
 
-#code-btn {
-    grid-row: 7;
+#portrait {
+    grid-row: 5;
+    grid-column: 6;
+    width: calc(4 * var(--cell-size));
 }
-
-#design-btn {
-    grid-row: 8;
-}
-
-#music-btn {
-    grid-row: 9;
-}
-
 
 @media screen and (max-width: 1000px) {
-    #diamond {
+    #portrait {
         grid-column: 3;
+        width: calc(3 * var(--cell-size));
     }
 }
 
 @media screen and (max-width: 600px) {
-    #diamond {
-        grid-column: 1;
+    #portrait {
+        grid-column: 2;
     }
 }

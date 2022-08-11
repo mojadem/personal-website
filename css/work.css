@@ -1,9 +1,131 @@
 @import "./common.css";
 
+:root {
+    --rows: 12;
+}
+
+#diamond {
+    grid-row: calc(var(--rows) - 3);
+    grid-column: calc(var(--columns) - 3) / calc(var(--columns));
+}
+
+#semidiamond {
+    grid-row: 3;
+    grid-column: 1;
+}
+
 .btn {
     width: calc(2 * var(--cell-size));
 }
 
 .btn h3 {
     padding: 0;
+}
+
+.btn {
+    grid-column: calc(var(--left-align) - 1);
+}
+
+#syntheco-btn {
+    grid-row: 5;
+}
+
+#fred-btn {
+    grid-row: 6;
+}
+
+#filesys-btn {
+    grid-row: 7;
+}
+
+#orblitz-btn {
+    grid-row: 8;
+}
+
+#anim-btn {
+    grid-row: 9;
+}
+
+#blender-btn {
+    grid-row: 10;
+}
+
+.info-viewport {
+    grid-column: calc(var(--left-align) + 1) / calc(var(--right-align) + 1);
+    grid-row: 5 / 11;
+}
+
+.info-viewport.active,
+.info {
+    width: calc((var(--right-align) - var(--left-align)) * var(--cell-size));
+}
+
+video,
+iframe,
+img {
+    padding: calc(.3 * var(--cell-size));
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --rows: 13;
+    }
+
+    #syntheco-btn {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    #fred-btn {
+        grid-row: 5;
+        grid-column: 3;
+    }
+
+    #filesys-btn {
+        grid-row: 6;
+        grid-column: 1;
+    }
+
+    #orblitz-btn {
+        grid-row: 6;
+        grid-column: 3;
+    }
+
+    #anim-btn {
+        grid-row: 7;
+        grid-column: 1;
+    }
+
+    #blender-btn {
+        grid-row: 7;
+        grid-column: 3;
+    }
+
+    #anim-btn.active,
+    #blender-btn.active {
+        border-bottom: none;
+    }
+
+    .info-viewport {
+        grid-row: 8 / 12;
+        grid-column: 1 / 5;
+        width: calc(4 * var(--cell-size));
+        height: 0px;
+        transition: height 500ms;
+    }
+
+    .info-viewport.active {
+        height: calc(4 * var(--cell-size));
+    }
+
+    .btn.inactive {
+        border: solid rgb(var(--light)) calc(.01 * var(--cell-size));
+    }
+
+    .btn.active,
+    .info-viewport.active {
+        border: solid rgb(var(--accent)) calc(.02 * var(--cell-size));
+    }
 }

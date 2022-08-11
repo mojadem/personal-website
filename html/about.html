@@ -35,17 +35,81 @@
     <main>
         <div id="circle" class="shape"></div>
         <div id="semicircle" class="shape"></div>
-        <img src="../assets/portrait.png" alt="self portrait" id="portrait" class="tile active">
         <section id="header">
             <h1>About me...</h1>
         </section>
         <section id="subheader">
-            <h2>A professional headshot is on my to-do list, so here's a picture of me from yesterday.</h2>
-            <h2>My name is Matt, and I'm a student at Penn State University. I study Computer Science and Digital Arts
-                and Media Design, and enjoy hobbies like music, fitness, and cooking.</h2>
+            <h2>I'm Matt Dembiczak, a student attending Penn State University.</h2>
+            <h2>Click the icons to learn more about me!</h2>
         </section>
+        <button id="school-btn" class="btn tile" data-topic="school"><i class="fa-solid fa-book"></i></button>
+        <button id="code-btn" class="btn tile" data-topic="code"><i class="fa-solid fa-code"></i></button>
+        <button id="design-btn" class="btn tile" data-topic="design"><i class="fa-solid fa-crop"></i></button>
+        <button id="music-btn" class="btn tile" data-topic="music"><i class="fa-solid fa-music"></i></button>
+        <div class="tile info-viewport">
+            <section id="school" class="info">
+                <h3>Education</h3>
+                <p>
+                    I'm currently a third year student at Penn State University based in University Park, PA, pursuing a
+                    double major in Computer Science and Digital Arts and Media Design.
+                </p>
+                <p>
+                    There has always been a part of me that yearns for artistic expression. When I entered college, I
+                    only had plans to pursue a degree in Computer Science. However, after discovering the Digital Arts
+                    and Media Design major, I knew it would be the perfect complement to both diversify my opportunities
+                    and to help me pursue my personal interests in indie game and web development.
+                </p>
+            </section>
+            <section id="code" class="info">
+                <h3>Coding</h3>
+                <p>
+                    I consider myself a software developer first and foremost. I began coding in high school when a
+                    teacher I was close to introduced me to HTML and CSS. At first, I wasn't very interested. It wasn't
+                    until I took an introductory Python course the following year that I truly became hooked.
+                </p>
+                <p>
+                    I now have experience in scientific computing with Python, systems programming in C and Rust,
+                    front-end development in JavaScript and frameworks like React, and am interested in everything
+                    in-between. I'm passionate about open-source and hope to some day contribute to some of my favorite
+                    projects, such as
+                    <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot</a> or
+                    <a href="https://bevyengine.org/" target="_blank" rel="noopener noreferrer">Bevy</a>.
+                </p>
+            </section>
+            <section id="design" class="info">
+                <h3>Design</h3>
+                <p>
+                    Digital art and design has always been an interest of mine. In fact, graphic design was my dream
+                    profession as a child, and was a pretty serious hobby of mine for a few years. I have particular
+                    interest in UI/UX design as well as 3D modeling, rendering, and computer graphics.
+                </p>
+                <p>
+                    Despite my passion for Computer Science, my education felt like it was missing something before my
+                    double major. Digital design is integral to software development; software is, in the majority of
+                    cases, written to be interacted with and understood by humans, and design is very much the
+                    philosophy of how humans interact and understand.
+                </p>
+            </section>
+            <section id="music" class="info">
+                <h3>Music</h3>
+                <p>
+                    In my free time, I love to engage with music. Throughout my childhood, I studied piano, with an
+                    interest in classical music. I have experimented in music production, and enjoy playing my keyboard
+                    and guitar. Someday I would like to become proficient in music production and sound design to
+                    complement my interests in game development.
+                </p>
+                <p>
+                    Some other hobbies of mine include fitness and nutrition, cooking, gaming, and
+                    experiencing nature. I would like to travel when I'm older, visiting major cities and national parks
+                    across the globe.
+                </p>
+            </section>
+        </div>
+        <a href="work.html" class="tile next">
+            <p>See what I do<i class="fa-solid fa-angle-right"></i></i></p>
+        </a>
     </main>
-    <script src="script.js" async defer></script>
+    <script src="../script.js" async defer></script>
 </body>
 
 </html>

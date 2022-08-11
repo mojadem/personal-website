@@ -5,16 +5,26 @@ btns.forEach((btn) =>
     btn.addEventListener("click", () => {
 
         if (btn.classList.contains("active")) {
+            var id = btn.dataset.topic;
+            var target = document.getElementById(id);
+
             deactivate(btn);
-            document.getElementById("info-viewport").classList.remove("active");
+            target.parentNode.classList.remove("active"); // deactivate info-viewport
+
             btns.forEach((otherBtn) => {
-                otherBtn.classList.remove("inactive");
+                if (btn.parentNode.isSameNode(otherBtn.parentNode)) {
+                    otherBtn.classList.remove("inactive");
+                }
             })
         } else {
+            var id = btn.dataset.topic;
+            var target = document.getElementById(id);
+
             activate(btn);
-            document.getElementById("info-viewport").classList.add("active");
+            target.parentNode.classList.add("active"); // activate info-viewport
+
             btns.forEach((otherBtn) => {
-                if (!btn.isSameNode(otherBtn)) {
+                if (!btn.isSameNode(otherBtn) && btn.parentNode.isSameNode(otherBtn.parentNode)) {
                     deactivate(otherBtn);
                 }
             })
