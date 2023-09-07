@@ -1,65 +1,64 @@
 @import "./common.css";
 
 :root {
-    --rows: 11;
+  --rows: 11;
 }
 
 #circle {
-    grid-row: 6;
-    grid-column: 5;
+  grid-row: 6;
+  grid-column: 5;
 }
 
 #semicircle {
-    transform: rotate(90deg);
-    grid-row: 1;
-    grid-column: var(--left-align);
+  transform: rotate(90deg);
+  grid-row: 1;
+  grid-column: var(--left-align);
 }
 
 #school-btn {
-    grid-row: 6;
+  grid-row: 6;
 }
 
 #code-btn {
-    grid-row: 7;
+  grid-row: 7;
 }
 
 #design-btn {
-    grid-row: 8;
+  grid-row: 8;
 }
 
 #music-btn {
-    grid-row: 9;
+  grid-row: 9;
 }
 
 .info-viewport {
-    grid-column: calc(var(--left-align) + 1) / var(--right-align);
-    grid-row: 6 / 10;
+  grid-column: calc(var(--left-align) + 1) / var(--right-align);
+  grid-row: 6 / 10;
 }
 
 .info-viewport.active,
 .info {
-    width: calc((var(--right-align) - var(--left-align) - 1) * var(--cell-size));
+  width: calc((var(--right-align) - var(--left-align) - 1) * var(--cell-size));
 }
 
-
 @media screen and (max-width: 1000px) {
-    :root {
-        --right-align: 6;
-        --left-align: 2;
-    }
+  :root {
+    --right-align: 6;
+    --left-align: 2;
+  }
 
-    #circle {
-        grid-column: 3;
-    }
+  #circle {
+    grid-column: 3;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    :root {
-        --right-align: 5;
-        --left-align: 1;
-    }
+  :root {
+    --right-align: 5;
+    --left-align: 1;
+  }
 
-    #circle {
-        grid-column: 1;
-    }
+  #circle {
+    grid-column: 1;
+  }
 }

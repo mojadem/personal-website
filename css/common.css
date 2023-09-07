@@ -1,61 +1,65 @@
 :root {
-    --light: 243, 242, 231;
-    --dark: 20, 22, 61;
-    --accent: 255, 206, 140;
+  --light: 243, 242, 231;
+  --dark: 20, 22, 61;
+  --accent: 255, 206, 140;
 
-    --rows: 10;
-    --columns: 10;
-    --cell-size: 100px;
-    --width: calc(var(--columns) * var(--cell-size));
+  --rows: 10;
+  --columns: 10;
+  --cell-size: 100px;
+  --width: calc(var(--columns) * var(--cell-size));
 
-    --left-align: 3;
-    --right-align: 9;
-    --top-align: 2;
+  --left-align: 3;
+  --right-align: 9;
+  --top-align: 2;
 }
 
 body {
-    background: rgb(157, 179, 202);
-    background: radial-gradient(circle, rgba(157, 179, 202, 1) 0%, rgba(102, 135, 174, 1) 100%);
-    margin: 0;
-    padding: 20px;
-    padding-top: 0px;
-    min-height: calc(100vh - 20px);
+  background: rgb(157, 179, 202);
+  background: radial-gradient(
+    circle,
+    rgba(157, 179, 202, 1) 0%,
+    rgba(102, 135, 174, 1) 100%
+  );
+  margin: 0;
+  padding: 20px;
+  padding-top: 0px;
+  min-height: calc(100vh - 20px);
 }
 
 h1 {
-    font-family: 'DM Serif Display', serif;
-    font-style: italic;
-    font-size: calc(.75 * var(--cell-size));
-    padding-left: calc(.05 * var(--cell-size));
-    padding-right: calc(.05 * var(--cell-size));
+  font-family: "DM Serif Display", serif;
+  font-style: italic;
+  font-size: calc(0.75 * var(--cell-size));
+  padding-left: calc(0.05 * var(--cell-size));
+  padding-right: calc(0.05 * var(--cell-size));
 }
 
 h2,
 h3,
 h4,
 p {
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 h2 {
-    font-size: calc(.36 * var(--cell-size));
-    padding: calc(.2 * var(--cell-size));
-    font-weight: 500;
+  font-size: calc(0.36 * var(--cell-size));
+  padding: calc(0.2 * var(--cell-size));
+  font-weight: 500;
 }
 
 h3 {
-    font-size: calc(.24 * var(--cell-size));
-    padding: calc(.15 * var(--cell-size));
+  font-size: calc(0.24 * var(--cell-size));
+  padding: calc(0.15 * var(--cell-size));
 }
 
 p,
 .next i {
-    font-size: calc(.18 * var(--cell-size));
-    padding: calc(.1 * var(--cell-size));
+  font-size: calc(0.18 * var(--cell-size));
+  padding: calc(0.1 * var(--cell-size));
 }
 
 i {
-    font-size: calc(.5 * var(--cell-size));
+  font-size: calc(0.5 * var(--cell-size));
 }
 
 p,
@@ -64,181 +68,180 @@ h2,
 h3,
 h4,
 i {
-    color: rgb(var(--dark));
-    margin: 0;
+  color: rgb(var(--dark));
+  margin: 0;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(var(--columns), var(--cell-size));
-    grid-template-rows: repeat(var(--rows), var(--cell-size));
-    width: var(--width);
-    margin: 0 auto;
-    background-image: url("../assets/grid-box.svg");
-    background-size: calc(var(--cell-size));
+  display: grid;
+  grid-template-columns: repeat(var(--columns), var(--cell-size));
+  grid-template-rows: repeat(var(--rows), var(--cell-size));
+  width: var(--width);
+  margin: 0 auto;
+  background-image: url("../assets/grid-box.svg");
+  background-size: calc(var(--cell-size));
 }
 
 .shape {
-    height: calc(4 * var(--cell-size));
-    width: calc(4 * var(--cell-size));
-    opacity: .25;
-    z-index: -1;
+  height: calc(4 * var(--cell-size));
+  width: calc(4 * var(--cell-size));
+  opacity: 0.25;
+  z-index: -1;
 }
 
 #circle {
-    background-image: url("../assets/circle.svg");
+  background-image: url("../assets/circle.svg");
 }
 
 #semicircle {
-    background-image: url("../assets/semicircle.svg");
+  background-image: url("../assets/semicircle.svg");
 }
 
 #diamond {
-    background-image: url("../assets/diamond.svg");
+  background-image: url("../assets/diamond.svg");
 }
 
 #semidiamond {
-    background-image: url("../assets/semidiamond.svg");
+  background-image: url("../assets/semidiamond.svg");
 }
 
 #header {
-    grid-column: var(--left-align) / var(--right-align);
-    grid-row: var(--top-align);
+  grid-column: var(--left-align) / var(--right-align);
+  grid-row: var(--top-align);
 }
 
 #subheader {
-    grid-column: var(--left-align) / var(--right-align);
-    grid-row: calc(var(--top-align) + 1);
+  grid-column: var(--left-align) / var(--right-align);
+  grid-row: calc(var(--top-align) + 1);
 }
 
 .tile {
-    box-sizing: border-box;
-    background-color: rgba(var(--light), 0.25);
-    border: solid rgb(var(--light)) calc(.01 * var(--cell-size));
+  box-sizing: border-box;
+  background-color: rgba(var(--light), 0.25);
+  border: solid rgb(var(--light)) calc(0.01 * var(--cell-size));
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 nav ul {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav li {
-    list-style: none;
-    width: var(--cell-size);
-    height: var(--cell-size);
-
+  list-style: none;
+  width: var(--cell-size);
+  height: var(--cell-size);
 }
 
 nav a,
 .next {
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .next {
-    width: calc(2 * var(--cell-size));
-    justify-content: flex-end;
-    grid-row: calc(var(--rows));
-    grid-column: calc(var(--columns) - 1);
+  width: calc(2 * var(--cell-size));
+  justify-content: flex-end;
+  grid-row: calc(var(--rows));
+  grid-column: calc(var(--columns) - 1);
 }
 
 a:hover,
 .btn:hover {
-    background-color: rgba(var(--light), 0.5);
+  background-color: rgba(var(--light), 0.5);
 }
 
 .tile.active,
 a:active,
 .btn:active {
-    background-color: rgba(var(--light), 0.75);
-    border: solid rgb(var(--accent)) calc(.02 * var(--cell-size));
+  background-color: rgba(var(--light), 0.75);
+  border: solid rgb(var(--accent)) calc(0.02 * var(--cell-size));
 }
 
 .btn {
-    cursor: pointer;
-    height: var(--cell-size);
-    width: var(--cell-size);
-    grid-column: var(--left-align);
+  cursor: pointer;
+  height: var(--cell-size);
+  width: var(--cell-size);
+  grid-column: var(--left-align);
 }
 
 .btn.active {
-    border-right: none;
+  border-right: none;
 }
 
 .btn.active:hover {
-    background-color: rgba(var(--light), 0.75);
+  background-color: rgba(var(--light), 0.75);
 }
 
 .btn.inactive {
-    border-right: solid rgb(var(--accent)) 2px;
+  border-right: solid rgb(var(--accent)) 2px;
 }
 
 .info-viewport {
-    position: relative;
-    border: none;
-    overflow-x: hidden;
-    overflow-y: overlay;
-    width: 0px;
-    transition: width 500ms;
+  position: relative;
+  border: none;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  width: 0px;
+  transition: width 500ms;
 }
 
 .info-viewport.active {
-    border: solid rgb(var(--accent)) 2px;
-    border-left: none;
+  border: solid rgb(var(--accent)) 2px;
+  border-left: none;
 }
 
 .info {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: opacity 250ms;
-    transition-delay: 0ms;
-    height: 0px;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 250ms;
+  transition-delay: 0ms;
+  height: 0px;
+  overflow: hidden;
 }
 
 .info.visible {
-    opacity: 1;
-    transition-delay: 500ms;
-    transition-duration: 500ms;
-    overflow: visible;
+  opacity: 1;
+  transition-delay: 500ms;
+  transition-duration: 500ms;
+  overflow: visible;
 }
 
 .info p,
 .info h3 {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 1000px) {
-    :root {
-        --columns: 6;
-        --left-align: 2;
-        --right-align: 6;
-        --top-align: 1;
-    }
+  :root {
+    --columns: 6;
+    --left-align: 2;
+    --right-align: 6;
+    --top-align: 1;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    :root {
-        --columns: 4;
-        --cell-size: min(100px, 20vw);
-        --left-align: 1;
-        --right-align: 5;
-        --top-align: 1;
-    }
+  :root {
+    --columns: 4;
+    --cell-size: min(100px, 20vw);
+    --left-align: 1;
+    --right-align: 5;
+    --top-align: 1;
+  }
 
-    nav {
-        justify-content: center;
-    }
+  nav {
+    justify-content: center;
+  }
 }

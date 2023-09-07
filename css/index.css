@@ -1,45 +1,23 @@
 @import "./common.css";
 
 #semicircle {
-    grid-row: 1;
-    grid-column: 1;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 #diamond {
-    grid-row: 6;
-    grid-column: var(--left-align);
-}
-
-#chess {
-    grid-row: 5;
-    grid-column: 6;
-    width: calc(4 * var(--cell-size));
-}
-
-#bench {
-    grid-row: 7;
-    grid-column: 2;
-    width: calc(3 * var(--cell-size));
+  grid-row: 6;
+  grid-column: var(--left-align);
 }
 
 @media screen and (max-width: 1000px) {
-    :root {
-        --rows: 13;
-    }
-
-    #bench {
-        grid-row: 9;
-        grid-column: 4;
-    }
-
-    #chess {
-        grid-row: 4;
-        grid-column: 1;
-    }
+  :root {
+    --rows: 13;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    #bench {
-        grid-column: 2;
-    }
+  #bench {
+    grid-column: 2;
+  }
 }

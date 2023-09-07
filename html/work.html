@@ -1,142 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Work</title>
-    <meta name="description" content="Personal Site">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="../assets/favicon.png" />
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/work.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/68cc02bf2e.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/work.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/68cc02bf2e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li><a class="tile" href="../index.html">
-                    <p>Home</p>
-                </a></li>
-            <li><a class="tile" href="about.html">
-                    <p>About</p>
-                </a></li>
-            <li><a class="tile active" href="#">
-                    <p>Work</p>
-                </a></li>
-            <li><a class="tile" href="contact.html">
-                    <p>Contact</p>
-                </a></li>
-        </ul>
+      <ul>
+        <li>
+          <a class="tile" href="../index.html">
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="about.html">
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile active" href="#">
+            <p>Work</p>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="contact.html">
+            <p>Contact</p>
+          </a>
+        </li>
+      </ul>
     </nav>
     <main>
-        <div id="diamond" class="shape"></div>
-        <div id="semidiamond" class="shape"></div>
-        <section id="header">
-            <h1>My Work:</h1>
+      <div id="diamond" class="shape"></div>
+      <div id="semidiamond" class="shape"></div>
+      <section id="header">
+        <h1>My Work:</h1>
+      </section>
+      <section id="subheader">
+        <h2>On this page you'll find all sorts of projects I've worked on.</h2>
+      </section>
+
+      <button id="syntheco-btn" class="btn tile" data-topic="syntheco">
+        <h3>SynthEco</h3>
+        <h4>Pittsburgh Supercomputing Center</h4>
+      </button>
+      <button id="fred-btn" class="btn tile" data-topic="fred">
+        <h3>FRED</h3>
+        <h4>Public Health Dynamics Lab</h4>
+      </button>
+      <button id="filesys-btn" class="btn tile" data-topic="filesys">
+        <h3>Distributed File System</h3>
+        <h4>CMPSC311</h4>
+      </button>
+      <button id="blender-btn" class="btn tile" data-topic="blender">
+        <h3>Blender Doughnut</h3>
+        <h4>Personal</h4>
+      </button>
+      <button id="orblitz-btn" class="btn tile" data-topic="orblitz">
+        <h3>Orblitz</h3>
+        <h4>DART 205</h4>
+      </button>
+      <button id="anim-btn" class="btn tile" data-topic="anim">
+        <h3>Choose Life</h3>
+        <h4>DART 206</h4>
+      </button>
+      <div class="tile info-viewport">
+        <section id="syntheco" class="info">
+          <h3>SynthEco</h3>
+          <p>
+            Developing SynthEco, a Python framework for creating Synthetic
+            Ecosystems.
+          </p>
+          <p>
+            I work with a team of researchers at the Pittsburgh Supercomputing
+            Center. My work involves interacting with the US Census API to
+            retrieve relevant population data to be used in generating a
+            synthetic population via Iterative Proportional Fitting.
+          </p>
         </section>
-        <section id="subheader">
-            <h2>On this page you'll find all sorts of projects I've worked on.</h2>
+        <section id="fred" class="info">
+          <h3>FRED</h3>
+          <p>
+            Working on the development of FRED, A Framework for Reconstructing
+            Epidemiological Dynamics, which is an agent-based modeling framework
+            developed by the University of Pittsburgh Public Health Dynamics
+            Laboratory in collaboration with the Pittsburgh Supercomputing
+            Center and the Carnegie Mellon University School of Computer
+            Science.
+          </p>
+        </section>
+        <section id="filesys" class="info">
+          <h3>Distributed File System</h3>
+          <p>
+            A school project in which we programmed a disk driver from scratch
+            using C to manage a distrubted file system.
+          </p>
+          <p>
+            I was tasked with engineering the software implementation of low
+            level functions such as read and write, optimizing the file system
+            by implementing a LRU write-through cache, and extending the device
+            driver to connect to a server controller through networking.
+          </p>
+        </section>
+        <section id="blender" class="info">
+          <h3>Blender Doughnut</h3>
+          <p>
+            My Blender Doughnut created as part of the popular Blender tutorial
+            series by
+            <a
+              href="https://www.youtube.com/c/BlenderGuruOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Blender Guru</a
+            >.
+          </p>
+          <video width="240" height="320" controls>
+            <source src="../assets/Blender Doughnut.mp4" type="video/mp4" />
+          </video>
+        </section>
+        <section id="orblitz" class="info">
+          <h3>Orblitz</h3>
+          <p>
+            The final project I created for DART205 - Creative Coding. It's an
+            endless arcade style game where you must match the falling orbs with
+            the paddles you see along the bottom of the screen. The game was
+            made with mobile controls in mind, and have plans to one day release
+            it as a full mobile game.
+          </p>
+          <img src="../assets/orblitz.png" alt="orblitz game" />
         </section>
 
-        <button id="syntheco-btn" class="btn tile" data-topic="syntheco">
-            <h3>SynthEco</h3>
-            <h4>Pittsburgh Supercomputing Center</h4>
-        </button>
-        <button id="fred-btn" class="btn tile" data-topic="fred">
-            <h3>FRED</h3>
-            <h4>Public Health Dynamics Lab</h4>
-        </button>
-        <button id="filesys-btn" class="btn tile" data-topic="filesys">
-            <h3>Distributed File System</h3>
-            <h4>CMPSC311</h4>
-        </button>
-        <button id="blender-btn" class="btn tile" data-topic="blender">
-            <h3>Blender Doughnut</h3>
-            <h4>Personal</h4>
-        </button>
-        <button id="orblitz-btn" class="btn tile" data-topic="orblitz">
-            <h3>Orblitz</h3>
-            <h4>DART 205</h4>
-        </button>
-        <button id="anim-btn" class="btn tile" data-topic="anim">
-            <h3>Choose Life</h3>
-            <h4>DART 206</h4>
-        </button>
-        <div class="tile info-viewport">
-            <section id="syntheco" class="info">
-                <h3>SynthEco</h3>
-                <p>Developing SynthEco, a Python framework for creating Synthetic Ecosystems.</p>
-                <p>
-                    I work with a team of researchers at the Pittsburgh Supercomputing Center. My work involves
-                    interacting with the US Census API to retrieve relevant population data to be used in generating a
-                    synthetic population via Iterative Proportional Fitting.
-                </p>
-            </section>
-            <section id="fred" class="info">
-                <h3>FRED</h3>
-                <p>
-                    Working on the development of FRED, A Framework for Reconstructing Epidemiological Dynamics, which
-                    is
-                    an agent-based modeling framework developed by the University of Pittsburgh Public Health Dynamics
-                    Laboratory in collaboration with the Pittsburgh Supercomputing Center and the Carnegie Mellon
-                    University School of Computer Science.
-                </p>
-            </section>
-            <section id="filesys" class="info">
-                <h3>Distributed File System</h3>
-                <p>
-                    A school project in which we programmed a disk driver from scratch using C to manage a distrubted
-                    file system.
-                </p>
-                <p>
-                    I was tasked with engineering the software implementation of low level functions such as read and
-                    write, optimizing the file system by implementing a LRU write-through cache, and extending the
-                    device driver to connect to a server controller through networking.
-                </p>
-            </section>
-            <section id="blender" class="info">
-                <h3>Blender Doughnut</h3>
-                <p>
-                    My Blender Doughnut created as part of the popular Blender tutorial series by
-                    <a href="https://www.youtube.com/c/BlenderGuruOfficial" target="_blank"
-                        rel="noopener noreferrer">Blender Guru</a>.
-                </p>
-                <video width="240" height="320" controls>
-                    <source src="../assets/Blender Doughnut.mp4" type="video/mp4">
-                </video>
-            </section>
-            <section id="orblitz" class="info">
-                <h3>Orblitz</h3>
-                <p>
-                    The final project I created for DART205 - Creative Coding. It's an endless arcade style game where
-                    you must match the falling orbs with the paddles you see along the bottom of the screen. The game
-                    was made with mobile controls in mind, and have plans to one day release it as a full mobile game.
-                </p>
-                <img src="../assets/orblitz.png" alt="orblitz game">
-            </section>
-
-            <section id="anim" class="info">
-                <h3>Choose Life</h3>
-                <p>
-                    The final project I created for DART204 - Animation. It was an abstract animation created using
-                    Illustrator and After Effects.
-                </p>
-                <iframe width="320" height="240" src="https://www.youtube.com/embed/0P9TCPXAFaQ"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </section>
-        </div>
-        <a href="contact.html" class="tile next">
-            <p>Contact me<i class="fa-solid fa-angle-right"></i></i></p>
-        </a>
+        <section id="anim" class="info">
+          <h3>Choose Life</h3>
+          <p>
+            The final project I created for DART204 - Animation. It was an
+            abstract animation created using Illustrator and After Effects.
+          </p>
+          <iframe
+            width="320"
+            height="240"
+            src="https://www.youtube.com/embed/0P9TCPXAFaQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+      </div>
+      <a href="contact.html" class="tile next">
+        <p>Contact me<i class="fa-solid fa-angle-right"></i></p>
+      </a>
     </main>
     <script src="../script.js" async defer></script>
-</body>
-
+  </body>
 </html>
